@@ -13,7 +13,11 @@
 				{{>members/visibility_label}}
 				{{tags separator=""}}
 			</div>
+			{{#has tag="Link Posts"}}
+			<h1 class="item-title"><a href="{{canonical_url}}" target="_blank">{{title}} &#8594;</h1>
+				{{else}}
 			<h1 class="item-title">{{title}}</h1>
+			{{/has}}
 			{{#if membership}}
 			<p class="membership-excerpt item-excerpt global-zigzag">
 				{{#if custom_excerpt}}
@@ -34,28 +38,10 @@
 			{{/if}}
 			{{#is "post"}}
 			<div class="item-meta global-meta">
-				{{#if authors}}
-				<div class="item-profile-image">
-					{{#foreach authors}}
-					{{#if profile_image}}
-					<a href="{{url}}" class="global-image">
-						{{>images/author_small_image}}
-					</a>
-					{{/if}}
-					{{/foreach}}
-				</div>
-				{{/if}}
-				<div class="item-authors">
-					{{#has author="count:<3"}}
-					{{authors}}
-					{{else has author="count:3"}}
-					{{authors to="2"}} {{t "and"}} {{authors from="3"}}
-					{{else has author="count:>3"}}
-					{{authors}}
-					{{/has}}
+
 					<div class="item-time">
 						<time datetime="{{date format="YYYY-MM-DD"}}">{{date published_at format="LL"}}</time> ∙ {{reading_time minute=(t "1 minute read") minutes=(t "% minutes read")}}
-					</div>
+					
 				</div>
 			</div>
 			{{/is}}

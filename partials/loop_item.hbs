@@ -29,7 +29,7 @@
 					<div class="item-time">
 						<time datetime="{{date format="YYYY-MM-DD"}}">{{date published_at format="LL"}}</time> ∙ {{reading_time minute=(t "1 minute read") minutes=(t "% minutes read")}}
 					</div>
-				
+
 			</div>
 		</div>
 	</div>
@@ -49,14 +49,7 @@
 			<div class="item-content">
 				<h2 class="item-title"><a href="{{url}}">{{title}}</a></h2>
 				<div class="item-meta global-meta global-pointer">
-					<div>
-						{{#has author="count:<3"}}
-						{{authors}}
-						{{else has author="count:>2"}}
-						{{authors limit="1"}}
-						{{t "and others"}}
-						{{/has}}
-					</div>
+					
 				</div>
 				{{^if feature_image}}
 				<p class="item-excerpt global-excerpt global-zigzag">

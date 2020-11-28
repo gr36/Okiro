@@ -1,0 +1,17 @@
+{{!< default}}
+{{#post}}
+<article class="post-section">
+	{{>post_header}}
+	<div class="post-content">
+		{{#if @labs.members}}
+		{{#if access}}
+		{{content}}
+		{{else}}
+		{{>members/cta}}
+		{{/if}}
+		{{else}}
+		{{content}}
+		{{/if}}
+	</div>
+</article>
+{{/post}}

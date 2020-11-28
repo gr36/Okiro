@@ -1,0 +1,51 @@
+{{!< default}}
+{{#post}}
+{{#if @labs.members}}
+{{#if access}}
+<progress class="post-progress"></progress>
+{{/if}}
+{{else}}
+<progress class="post-progress"></progress>
+{{/if}}
+<article class="post-section">
+	{{>post_header}}
+	<div class="post-content">
+		{{#if @labs.members}}
+		{{#if access}}
+		{{content}}
+		{{>post_share}}
+		{{else}}
+		{{>members/cta}}
+		{{/if}}
+		{{else}}
+		{{content}}
+		{{>post_share}}
+		{{/if}}
+	</div>
+</article>
+{{>post_nextprev}}
+{{#if @labs.members}}
+{{#if access}}
+<div class="comments-section">
+	<div class="comments-wrap">
+		{{>services/disqus}}
+	</div>
+</div>
+{{/if}}
+{{else}}
+<div class="comments-section">
+	<div class="comments-wrap">
+		{{>services/disqus}}
+	</div>
+</div>
+{{/if}}
+{{#if @labs.members}}
+{{#if access}}
+{{>post_related}}
+{{else}}
+{{>members/post_public}}
+{{/if}}
+{{else}}
+{{>post_related}}
+{{/if}}
+{{/post}}

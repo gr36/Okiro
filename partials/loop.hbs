@@ -1,0 +1,16 @@
+<div class="loop-section">
+	<div class="loop-wrap">
+		{{^is "paged"}}
+		{{#foreach posts to="1" visibility="all"}}
+		{{>loop_item item_first=true}}
+		{{/foreach}}
+		{{#foreach posts from="2" visibility="all"}}
+		{{>loop_item}}
+		{{/foreach}}
+		{{else}}
+		{{#foreach posts visibility="all"}}
+		{{>loop_item}}
+		{{/foreach}}
+		{{/is}}
+	</div>
+</div>

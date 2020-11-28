@@ -25,28 +25,11 @@
 				{{excerpt words="24"}}...
 			</p>
 			<div class="item-meta global-meta">
-				{{#if authors}}
-				<div class="item-profile-image">
-					{{#foreach authors}}
-					{{#if profile_image}}
-					<a href="{{url}}" class="global-image">
-						{{>images/author_small_image}}
-					</a>
-					{{/if}}
-					{{/foreach}}
-				</div>
-				{{/if}}
-				<div class="item-authors">
-					{{#has author="count:<3"}}
-					{{authors}}
-					{{else has author="count:>2"}}
-					{{authors limit="1"}}
-					{{t "and others"}}
-					{{/has}}
+
 					<div class="item-time">
 						<time datetime="{{date format="YYYY-MM-DD"}}">{{date published_at format="LL"}}</time> ∙ {{reading_time minute=(t "1 minute read") minutes=(t "% minutes read")}}
 					</div>
-				</div>
+				
 			</div>
 		</div>
 	</div>

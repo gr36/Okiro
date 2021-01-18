@@ -1,9 +1,11 @@
 <div class="loop-section">
 	<div class="loop-wrap">
 		{{^is "paged"}}
-		{{#foreach posts filter="tags:newsletter"}}
-		{{>loop_item}}
-		{{/foreach}}
+			{{#get "posts" filter="tags:newsletter"}}
+				{{#foreach posts}}
+					{{>loop_item}}
+				{{/foreach}}
+			{{/get}}
 		{{/is}}
 	</div>
 </div>

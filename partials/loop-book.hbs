@@ -1,11 +1,11 @@
 <div class="loop-section">
 	<div class="loop-wrap">
-		{{^is "paged"}}
+
 			{{#get "posts" filter="tags:newsletter"}}
 				{{#foreach posts}}
 					{{>loop_item}}
 				{{/foreach}}
 			{{/get}}
-		{{/is}}
+		
 	</div>
 </div>

@@ -3,7 +3,7 @@
 		{{^is "paged"}}
 			{{#get "posts" filter="tags:[book, podcast, article]"}}
 				{{#foreach posts}}
-					{{>loop_item}}
+					{{>loop_item_book}}
 				{{/foreach}}
 			{{/get}}
 		{{/is}}

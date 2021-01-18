@@ -1,7 +1,7 @@
 <div class="loop-section">
 	<div class="loop-wrap">
 		{{^is "paged"}}
-			{{#get "posts" filter="tags:[book,podcast,article]"}}
+			{{#get "posts" filter="tags:[book, podcast, article]"}}
 				{{#foreach posts}}
 					{{>loop_item}}
 				{{/foreach}}

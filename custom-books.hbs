@@ -3,14 +3,13 @@
 	<div class="archive-wrap">
 		<div class="archive-container is-custom">
 			<div class="archive-content is-custom">
-				<h1 class="archive-title">Notes And Thoughts</h1>
+				<h1 class="archive-title">Notes And Ideas</h1>
 
 				<p class="archive-description global-zigzag">
 				{{>icons/site/zigzag}}
 				{{description}}
 			</p>
-				Find mini-reviews and all my thoughts about the things I consume here. <br>
-        Books, podcasts and anything I think deserves a mention can be found below.
+				Find mini-reviews and all my thoughts about the things I consume here.
 			</div>
 		</div>
 		{{!-- <div class="archive-counter is-custom">
@@ -19,7 +18,8 @@
 		</div> --}}
 	</div>
 	<div class="archive-cover global-image">
-		<img src="https://images.unsplash.com/photo-1526429450415-2b979b89d228?" style="feature_image">
+		{{!-- <img src="https://images.unsplash.com/photo-1526429450415-2b979b89d228?" style="feature_image">--}}
+		{{>https://images.unsplash.com/photo-1526429450415-2b979b89d228?=feature_image alt=name}}
 	</div>
 </div>
 {{>loop_book}}

@@ -1,2 +1,27 @@
 {{!< default}}
+<div class="archive-section">
+	<div class="archive-wrap">
+		<div class="archive-container is-custom">
+			<div class="archive-content is-custom">
+				<h1 class="archive-title">Notes And Thoughts</h1>
+
+				<p class="archive-description global-zigzag">
+				{{>icons/site/zigzag}}
+				{{description}}
+			</p>
+				Find mini-reviews and all my thoughts about the things I consume here. <br>
+        Books, podcasts and anything I think deserves a mention can be found below.
+			</div>
+		</div>
+		{{!-- <div class="archive-counter is-custom">
+			<span>{{../pagination.total}}</span>
+			<span>{{plural ../pagination.total empty=(t "No posts") singular=(t "Post") plural=(t "Posts")}}</span>
+		</div> --}}
+	</div>
+	{{#if feature_image}}
+	<div class="archive-cover global-image">
+		{{>images/archive_image archive_image=feature_image alt=name}}
+	</div>
+	{{/if}}
+</div>
 {{>loop_book}}

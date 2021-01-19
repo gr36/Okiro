@@ -1,2 +1,22 @@
 {{!< default}}
+<div class="archive-section">
+	<div class="archive-wrap">
+		<div class="archive-container is-custom">
+			<div class="archive-content is-custom">
+				<h1 class="archive-title">Notes And Ideas</h1>
+
+				<p class="archive-description global-zigzag">
+				{{>icons/site/zigzag}}
+				{{description}}
+			</p>
+				Find mini-reviews and all my thoughts about the things I consume here.
+			</div>
+		</div>
+		{{!-- <div class="archive-counter is-custom">
+			<span>{{../pagination.total}}</span>
+			<span>{{plural ../pagination.total empty=(t "No posts") singular=(t "Post") plural=(t "Posts")}}</span>
+		</div> --}}
+	</div>
+
+</div>
 {{>loop_book}}
